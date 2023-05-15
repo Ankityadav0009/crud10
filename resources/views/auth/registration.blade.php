@@ -8,19 +8,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     
 </head>
-<body style=" background-color: red";>
+<body style=" background-color: #68ccaf";>
     
         <div class="container">
             <div class="row">
             <div class="col-md-4 col-md-offset-4" style="margin-top:20px;">
 <h4>Registration</h4>
             <form action="{{route('register-user')}}" method="post">
-              <!-- @if(Session::has('success'))
+              @if(Session::has('success'))
               <div class="alert alert-success">{{Session::get('success')}}</div>
               @endif
               @if(Session::has('fail'))
               <div class="alert alert-danger">{{Session::get('fail')}}</div>
-              @endif -->
+              @endif
                 @csrf
             <div class="form-group">
     <label for="name">Name</label>
@@ -37,7 +37,7 @@
     <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" >
     <span class="text-danger">@error('password')*{{$message}} @enderror </span>
   </div>
-  
+  <br>
   <button type="submit" class="btn btn-block btn-primary">Register</button>
   
   <a href="login">login </a>

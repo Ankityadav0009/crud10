@@ -9,7 +9,7 @@
     
 </head>
 
-<body style=" background-color: yellow";>
+<body style=" background-color: #a9c0b9";>
 <div class="container" style="text-align: center;";>
             <div class="row">
             <div class="col-md-3 col-md-offset-4" style="margin-top:20px;">
