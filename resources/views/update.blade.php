@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>registration</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    
-</head>
-<style>
+    <style>
             .container1 {
   width: 1278px;
   height: 574px;
@@ -18,43 +16,47 @@
   align-items: center;
 }
         </style>
-
-<body style=" background-color: #a9c0b9";>
-<div class=" container1" >
-            <div class="">
-            <div >
-<h4>Login</h4>
-            <form action="{{route('login-user')}}" method="post">
-            @if(Session::has('success'))
+</head>
+<body style=" background-color: #00ccaf"; class ="container1">
+    
+        <div class="container">
+            <div class="row">
+            <div class="col-md-4 col-md-offset-4" style="margin-top:20px;">
+<h4>Registration</h4>
+            <form action="{{route('register-user1')}}" method="post">
+              @if(Session::has('success'))
               <div class="alert alert-success">{{Session::get('success')}}</div>
               @endif
               @if(Session::has('fail'))
               <div class="alert alert-danger">{{Session::get('fail')}}</div>
               @endif
-            @csrf
-  <div class="form-group">
-    <label for="Email1">Email address</label>
-    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" value="{{old('email')}}">
-    <span class="text-danger">@error('email')*{{$message}} @enderror </span>
-    
+                @csrf
+            <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="name" placeholder="name" value="">
+    <span class="text-danger">@error('name')*{{$message}} @enderror </span>
   </div>
   <div class="form-group">
-    <label for="Password1">Password</label>
-    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <label for="Email1">age</label>
+    <input type="text" name="age" class="form-control" id="age" aria-describedby="emailHelp" placeholder="Age" value="">
+    <span class="text-danger">@error('email')*{{$message}} @enderror </span>
+  </div>
+  <div class="form-group">
+    <label for="Password1">city</label>
+    <input type="text" name="city" class="form-control" id="city" placeholder="City" >
     <span class="text-danger">@error('password')*{{$message}} @enderror </span>
   </div>
-  <div class="form-group">
-    <br>
-  <button type="submit" class="btn btn-block btn-primary">login</button>
-  </div>
-  <a href="registration">New User !! Reister Here </a>
+  <br>
+  <button type="submit" class="btn btn-block btn-primary">Submit</button>
   
+ 
 </form>
 
             </div>
         </div>
 
   
+    
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 </html>

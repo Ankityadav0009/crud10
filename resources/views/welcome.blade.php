@@ -12,15 +12,24 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
         <!-- Styles -->
+        <style>
+            .container {
+  width: 1278px;
+  height: 574px;
+  margin: 50px;                                                 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:orange;
+}
+        </style>
         
     </head>
     <body class="antialiased">
-    <!-- <a href="login"><button type="submit" class="">login</button></a> -->
-    <a href="login"><button type="button" class="btn btn-primary btn-lg">login user managment</button></a>
+        <div  class='container'>
+    <a href="login"><button type="button" class="btn btn-primary btn-lg">login user managment </button></a> &nbsp
     <a href="crud"><button type="button" class="btn btn-primary btn-lg">crud operation</button></a>
-    <br>
-    <br>
-    <!-- <a href="crud"><button type="submit" class="">User Management</button></a> -->
+    </div>
 
     </body>
 </html>
