@@ -65,8 +65,9 @@ return redirect()->back();
     public function add (){
         $url=url('/register-user1');
         $title="Add User";
-        $data=compact('url','title');
-        return view("create")->with($data);
+        $data=array("name"=>"","age"=>"","city"=>"",);
+        $dataS=compact('url','title','data');
+        return view("create")->with($dataS);
     }
     public function updatedata ($id,Request $request){
         $data=crudmodel::find($id);
